@@ -20,7 +20,7 @@ function Event() {
   const [applied, SetApplied] = useState(false);
   const [approved, SetApproved] = useState(false);
   const [event, SetEvent] = useState({});
-  const API_URL = "http://localhost:8000/api/";
+  const API_URL = "/api/";
   const token = user.token;
   const [appliedUsers, SetAppliedUsers] = useState([]);
   const [approvedUsers, SetApprovedUsers] = useState([]);

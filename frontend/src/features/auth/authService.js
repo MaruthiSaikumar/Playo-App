@@ -1,7 +1,7 @@
 import axios from "axios";
 axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
 axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
-const API_URL = "http://localhost:8000/api/users/";
+const API_URL = "/api/users/";
 
 // Register user
 const register = async (userData) => {
