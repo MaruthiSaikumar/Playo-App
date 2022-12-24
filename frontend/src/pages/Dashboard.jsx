@@ -23,10 +23,7 @@ function ApprovedEvents() {
       console.log(message);
     }
 
-    if (!user) {
-      navigate("/login");
-    }
-    if (!user._id && !user.token) {
+    if (!user || user._id == null || user._id === undefined) {
       navigate("/login");
     }
 
