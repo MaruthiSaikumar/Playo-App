@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import EventItem from "../components/EventItem";
 import Spinner from "../components/Spinner";
 import { getEvents, reset } from "../features/events/eventSlice";
+import { use } from "express/lib/application";
 
 function ApprovedEvents() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function ApprovedEvents() {
       console.log(message);
     }
 
-    if (!user) {
+    if (!user || !user._id || !user.token) {
       navigate("/login");
     }
 
