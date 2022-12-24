@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useDispatch } from "react-redux";
 import { createEvent } from "../features/events/eventSlice";
 import { toast } from "react-toastify";

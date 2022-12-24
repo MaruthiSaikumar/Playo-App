@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import EventItem from "../components/EventItem";
@@ -23,7 +23,10 @@ function ApprovedEvents() {
       console.log(message);
     }
 
-    if (!user || !user._id || !user.token) {
+    if (!user) {
+      navigate("/login");
+    }
+    if (!user._id && !user.token) {
       navigate("/login");
     }
 
